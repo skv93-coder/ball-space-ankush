@@ -28,8 +28,6 @@ export const useSpecialButton = (fc, time, eventPipe) => {
       if (eventPipe) {
         eventPipe("START");
       }
-      fc();
-
       ref.current = setInterval(fc, time);
     }
   };
