@@ -7,13 +7,14 @@ export default function useKeyUpDown({ keyArr, fc, time }) {
     const handleKeyDown = (ev) => {
       if (keyArr.includes(ev.code)) {
         if (!ref.current) {
+          ref.current = setInterval(() => {
+            fc(ev.code);
+          }, time);
           fc(ev.code);
-          ref.current = setInterval(() => fc(ev.code), time);
         }
       }
     };
     const handleKeyUp = (ev) => {
-      console.log("ev.code", ev.code, ref.current);
       if (keyArr.includes(ev.code)) {
         if (ref.current) {
           clearInterval(ref.current);

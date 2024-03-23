@@ -2,14 +2,16 @@ import { useRef } from "react";
 
 export const useSpecialButton = (fc, time, eventPipe) => {
   const ref = useRef();
-  console.log("200", 200);
+
   const onMouseDown = () => {
     if (!ref.current) {
       if (eventPipe) {
         eventPipe("START");
       }
       fc();
-      ref.current = setInterval(fc, time);
+      ref.current = setInterval(() => {
+        fc();
+      }, time);
     }
   };
   const onMouseUp = () => {
@@ -57,6 +59,3 @@ export const useSpecialButton = (fc, time, eventPipe) => {
     onTouchCancel,
   };
 };
-// what should happen?
-// hours should be in control of task assigner?
-// 
