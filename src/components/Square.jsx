@@ -16,7 +16,7 @@ export default function Square() {
         left: square.x + "%",
       }}
     >
-      {ball.x},{ball.y}
+      {/* {ball.x},{ball.y} */}
     </div>
   );
 }
