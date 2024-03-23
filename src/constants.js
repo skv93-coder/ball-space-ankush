@@ -1,3 +1,8 @@
-export const ballDimension = { height: 4, width: 1.5 };
-export const squareDimension={ height: 15, width: 5 };
+const screenWidth = window.screen.width;
+const screenHeight = window.screen.height;
+export const ballDimension = { height: 4, width: screenWidth > 700 ? 1.5 : 4 };
+export const squareDimension = {
+  height: 15,
+  width: screenWidth > 700 ? 5 : 15,
+};
 export const increment = 5;
