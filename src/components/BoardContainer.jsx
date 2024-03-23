@@ -8,8 +8,6 @@ export default function BoardContainer() {
       className="board-container"
       style={{
         border: "1px solid black",
-        margin: "0 50px",
-        // width: "calc(100vw - 100px)",
         height: "75vh",
         position: "relative",
       }}
