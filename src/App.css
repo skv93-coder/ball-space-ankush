@@ -19,4 +19,7 @@ body,
   .board-container {
     margin: none;
   }
+  .ball {
+    transition: all 2s linear ;
+  }
 }
