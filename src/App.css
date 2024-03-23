@@ -8,6 +8,6 @@ body,
   margin: 0px;
 }
 .ball {
-  transition: all 0.5s ease-out allow-discrete;
+  transition: all 1s linear allow-discrete;
   transform: translateZ(0px);
 }
