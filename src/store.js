@@ -12,16 +12,16 @@ const handleReduced = (prev, action) => {
   // eslint-disable-next-line default-case
   switch (action.type) {
     case "LEFT":
-      ball = { ...ball, x: ball.x - increment };
+      const x = (ball = { ...ball, x: Math.min(ball.x - increment, 0) });
       break;
     case "RIGHT":
-      ball = { ...ball, x: ball.x + increment };
+      ball = { ...ball, x: Math.max(100, ball.x + increment) };
       break;
     case "UP":
-      ball = { ...ball, y: ball.y - increment };
+      ball = { ...ball, y: Math.min(0, ball.y - increment) };
       break;
     case "DOWN":
-      ball = { ...ball, y: ball.y + increment };
+      ball = { ...ball, y: Math.max(100, ball.y + increment) };
       break;
   }
   return { ...prev, ball, square };
