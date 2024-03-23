@@ -12,3 +12,11 @@ body,
   transition: all 1s linear allow-discrete;
   transform: translateZ(0px);
 }
+.board-container {
+  margin: 0 50px;
+}
+@media only screen and (max-width: 768px) {
+  .board-container {
+    margin: none;
+  }
+}
