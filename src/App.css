@@ -6,9 +6,9 @@ body,
   box-sizing: border-box;
   padding: 0px;
   margin: 0px;
+  user-select: none;
 }
 .ball {
   transition: all 1s linear allow-discrete;
   transform: translateZ(0px);
-  user-select: none;
 }

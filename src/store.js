@@ -2,10 +2,6 @@ import React, { useContext, useReducer } from "react";
 import { increment } from "./constants";
 const context = React.createContext(null);
 
-const createXPoint = (x) => {
-  return Math.max(x, 100);
-};
-
 const handleReduced = (prev, action) => {
   let { ball, square } = prev;
 
