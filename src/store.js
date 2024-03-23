@@ -12,7 +12,7 @@ const handleReduced = (prev, action) => {
   // eslint-disable-next-line default-case
   switch (action.type) {
     case "LEFT":
-      const x = (ball = { ...ball, x: Math.max(ball.x - increment, 0) });
+      ball = { ...ball, x: Math.max(ball.x - increment, 0) };
       break;
     case "RIGHT":
       ball = { ...ball, x: Math.min(100, ball.x + increment) };
