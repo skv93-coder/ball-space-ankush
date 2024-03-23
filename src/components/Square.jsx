@@ -1,9 +1,10 @@
 import React from "react";
-import { useSquare } from "../store";
+import { useBall, useSquare } from "../store";
 import { squareDimension } from "../constants";
 
 export default function Square() {
   const square = useSquare();
+  const ball = useBall();
   return (
     <div
       style={{
@@ -14,6 +15,8 @@ export default function Square() {
         top: square.y + "%",
         left: square.x + "%",
       }}
-    ></div>
+    >
+      {ball.x},{ball.y}
+    </div>
   );
 }
