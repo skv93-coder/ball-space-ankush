@@ -11,6 +11,7 @@ export default function NavigationContainer() {
         alignItems: "center",
         position: "relative",
         height: "300px",
+        width: "100%",
       }}
     >
       <ButtonGroup idx={3} />

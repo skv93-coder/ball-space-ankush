@@ -30,7 +30,7 @@ export default function Button({ k, idx, top, left }) {
       <button
         style={{
           background: isBeingPressed === "START" ? "gray" : "white",
-          // padding: "1% 3%",
+          // padding: "0.5% 0.5%",
           top: top + "%",
           left: left + "%",
           position: "absolute",

@@ -4,12 +4,8 @@ import { ballDimension } from "../constants";
 
 export default function Ball({ idx }) {
   const ball = useBall(idx);
-  console.log("ball,idx", ball, idx);
   return (
     <div
-      onClick={() => {
-        console.log("ball", idx, ball, idx);
-      }}
       style={{
         height: ballDimension.height + "%",
         width: ballDimension.width + "%",
@@ -23,5 +19,3 @@ export default function Ball({ idx }) {
     ></div>
   );
 }
-// 1. strong independent
-// 2. something she cares about full time

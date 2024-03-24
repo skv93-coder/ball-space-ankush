@@ -32,7 +32,6 @@ const handleReduced = (prev, action) => {
       };
       break;
   }
-  console.log("ball", ball, prev.ball);
   return { ...prev, ball, square };
 };
 const initialStore = {

@@ -15,7 +15,6 @@ const keyArr = ["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"];
 export default function GameContainer() {
   const dispatch = useDispatch();
 
-
   const balls = [0, 1, 2];
   const handleKeyUp = useCallback(
     (code) => {
@@ -25,7 +24,7 @@ export default function GameContainer() {
   );
   useKeyUpDown({ keyArr, fc: handleKeyUp, time: 1000 });
   return (
-    <div style={{ width: "100%", height: "100vh" }}>
+    <div style={{ height: "100vh" }} className="game-container">
       {balls.map((b, i) => (
         <BoardContainer key={i} idx={i} />
       ))}
