@@ -1,10 +1,10 @@
 import React from "react";
-import { useBall, useSquare } from "../store";
+import { useSquare } from "../store";
 import { squareDimension } from "../constants";
 
 export default function Square() {
   const square = useSquare();
-  const ball = useBall();
+
   return (
     <div
       style={{

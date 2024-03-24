@@ -6,15 +6,33 @@ export default function NavigationContainer() {
   return (
     <div
       style={{
-        display: "flex",
+        display: "grid",
         justifyContent: "center",
         padding: "10px 12px",
+        alignItems: "center",
       }}
     >
-      <div>
-        {keyboard.map((k) => (
-          <Button k={k} key={k} />
-        ))}
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <Button k={keyboard[0]} key={keyboard[0]} />
+      </div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          padding: "10px 12px",
+          gap: 8,
+        }}
+      >
+        <Button k={keyboard[1]} key={keyboard[1]} />
+        <Button k={keyboard[3]} key={keyboard[3]} />
+      </div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <Button k={keyboard[2]} key={keyboard[2]} />
       </div>
     </div>
   );
