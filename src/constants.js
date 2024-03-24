@@ -5,4 +5,4 @@ export const squareDimension = {
   height: 15,
   width: screenWidth > 700 ? 5 : 15,
 };
-export const increment = 3;
+export const increment = 4;

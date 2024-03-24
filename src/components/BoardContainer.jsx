@@ -9,7 +9,7 @@ export default function BoardContainer({ idx }) {
       className="board-container"
       style={{
         border: "1px solid black",
-        height: "25vh",
+        height: "50vh",
         position: "relative",
       }}
     >

@@ -19,9 +19,9 @@ export default function Button({ k, idx, top, left }) {
   useIntersection(
     ball &&
       ball.x >= left &&
-      ball.x <= left + 5 &&
+      ball.x < left + 5 &&
       ball.y >= top &&
-      ball.y <= top + 12,
+      ball.y < top + 12,
     handleClick,
     1000
   );
@@ -30,7 +30,6 @@ export default function Button({ k, idx, top, left }) {
       <button
         style={{
           background: isBeingPressed === "START" ? "gray" : "white",
-          // padding: "0.5% 0.5%",
           top: top + "%",
           left: left + "%",
           position: "absolute",
