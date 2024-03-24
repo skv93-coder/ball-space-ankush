@@ -8,7 +8,6 @@ export default function Button({ k, idx, top, left }) {
   const dispatch = useDispatch();
 
   const handleClick = useCallback(() => {
-    console.log("k", k);
     dispatch({ type: k.toUpperCase(), payload: idx - 1 });
   }, [k, dispatch, idx]);
   const handleClickStart = useCallback((ev) => {
@@ -16,16 +15,7 @@ export default function Button({ k, idx, top, left }) {
   }, []);
   const evListener = useSpecialButton(handleClick, 1000, handleClickStart);
   const ball = useBall(idx);
-  console.log(
-    "qwerty"
-    // ball,
-    // left,
-    // top,
-    // ball.x >= left,
-    // ball.x <= left + 5,
-    // ball.y >= top,
-    // ball.y <= top + 5
-  );
+
   useIntersection(
     ball &&
       ball.x >= left &&
@@ -51,7 +41,7 @@ export default function Button({ k, idx, top, left }) {
         {...evListener}
       >
         {k[0].toUpperCase()}
-        {k.slice(1)},{ball && ball.x},{ball && ball.y}
+        {k.slice(1)}
       </button>
     </>
   );
