@@ -16,7 +16,7 @@ const handleReduced = (prev, action) => {
     case "RIGHT":
       ball[action.payload] = {
         ...ball[action.payload],
-        x: Math.min(100, ball[action.payload].x + increment),
+        x: Math.min(95, ball[action.payload].x + increment),
       };
       break;
     case "UP":
@@ -28,7 +28,7 @@ const handleReduced = (prev, action) => {
     case "DOWN":
       ball[action.payload] = {
         ...ball[action.payload],
-        y: Math.min(100, ball[action.payload].y + increment),
+        y: Math.min(95, ball[action.payload].y + increment),
       };
       break;
   }

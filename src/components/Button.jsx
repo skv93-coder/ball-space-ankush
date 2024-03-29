@@ -18,9 +18,9 @@ export default function Button({ k, idx, top, left }) {
 
   useIntersection(
     ball &&
-      ball.x >= left &&
+      ball.x > left &&
       ball.x < left + 5 &&
-      ball.y >= top &&
+      ball.y > top &&
       ball.y < top + 12,
     handleClick,
     1000
